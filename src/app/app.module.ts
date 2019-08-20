@@ -8,6 +8,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { NewProjectModalComponent } from './components/home/new-project-modal/new-project-modal.component';
 import { InputPaneComponent } from './components/input-pane/input-pane.component';
 import { OutputPaneComponent } from './components/output-pane/output-pane.component';
+import { MissingHeaderRowComponent } from './components/input-pane/missing-header-row/missing-header-row.component';
+import { NgxFileDropModule } from 'ngx-file-drop';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { OutputPaneComponent } from './components/output-pane/output-pane.compon
     HeaderComponent,
     NewProjectModalComponent,
     InputPaneComponent,
-    OutputPaneComponent
+    OutputPaneComponent,
+    MissingHeaderRowComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    NgxFileDropModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
