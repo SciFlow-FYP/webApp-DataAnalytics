@@ -12,6 +12,16 @@ import { MissingHeaderRowComponent } from './components/input-pane/missing-heade
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ConsoleComponent } from './common/console/console.component';
+import { ProgressBarComponent } from './common/progress-bar/progress-bar.component';
+import { InvalidFileTypeComponent } from './components/combineCsvs/invalid-file-type/invalid-file-type.component';
+import { SelectFilesComponent } from './components/combineCsvs/select-files/select-files.component';
+import { DataCleaningComponent } from './components/selectWorkflow/data-cleaning/data-cleaning.component';
+import { DataSelectionComponent } from './components/selectWorkflow/data-selection/data-selection.component';
+import { DataTransformationComponent } from './components/selectWorkflow/data-transformation/data-transformation.component';
+import { DataMiningComponent } from './components/selectWorkflow/data-mining/data-mining.component';
+import { KnowledgePresentationComponent } from './components/selectWorkflow/knowledge-presentation/knowledge-presentation.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +30,17 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     NewProjectModalComponent,
     InputPaneComponent,
+    MissingHeaderRowComponent,
+    ConsoleComponent,
     OutputPaneComponent,
-    MissingHeaderRowComponent
+    ProgressBarComponent,
+    InvalidFileTypeComponent,
+    SelectFilesComponent,
+    DataCleaningComponent,
+    DataSelectionComponent,
+    DataTransformationComponent,
+    DataMiningComponent,
+    KnowledgePresentationComponent
   ],
   imports: [
     BrowserModule,
