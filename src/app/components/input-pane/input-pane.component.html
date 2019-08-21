@@ -7,12 +7,12 @@
             <!-- <div class="file-upload-wrapper">
                 <input type="file" id="input-file-now" class="file-upload" />
             </div> -->
-            <div class="center">
+            <!--<div class="center">
                 <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
                 (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
                     <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
                         Drag and Drop files here
-                      <!-- <button type="button" (click)="openFileSelector()">Browse Files</button> -->
+                       <button type="button" (click)="openFileSelector()">Browse Files</button>
                     </ng-template>
                 </ngx-file-drop>
                 <div class="upload-table">
@@ -30,19 +30,21 @@
                     </table>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary" style="text-align: right">Proceed</button>
+                     <app-missing-header-row></app-missing-header-row> 
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      Do you want to combine multiple csv files?<br>
+                      <button type="button" class="btn btn-primary" style="text-align: right">Combine csvs</button>
+                  </div>
+                </div>-->
+                <router-outlet></router-outlet>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-              <button type="button" class="btn btn-primary" style="text-align: right">Proceed</button>
-              <!-- <app-missing-header-row></app-missing-header-row> -->
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                Do you want to combine multiple csv files?<br>
-                <button type="button" class="btn btn-primary" style="text-align: right">Combine csvs</button>
-            </div>
-          </div>
+        
 
 
       </div>

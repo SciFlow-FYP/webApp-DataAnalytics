@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './common/header/header.component';
+import { WorkflowComponentsComponent } from './components/workflow-components/workflow-components.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'webApp',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full'},
-      { path: 'orders', component: HeaderComponent}
+      { path: 'workflow', component: WorkflowComponentsComponent}
     ]
   },
 ];

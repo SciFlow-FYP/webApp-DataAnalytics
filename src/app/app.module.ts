@@ -16,12 +16,7 @@ import { ConsoleComponent } from './common/console/console.component';
 import { ProgressBarComponent } from './common/progress-bar/progress-bar.component';
 import { InvalidFileTypeComponent } from './components/combineCsvs/invalid-file-type/invalid-file-type.component';
 import { SelectFilesComponent } from './components/combineCsvs/select-files/select-files.component';
-import { DataCleaningComponent } from './components/selectWorkflow/data-cleaning/data-cleaning.component';
-import { DataSelectionComponent } from './components/selectWorkflow/data-selection/data-selection.component';
-import { DataTransformationComponent } from './components/selectWorkflow/data-transformation/data-transformation.component';
-import { DataMiningComponent } from './components/selectWorkflow/data-mining/data-mining.component';
-import { KnowledgePresentationComponent } from './components/selectWorkflow/knowledge-presentation/knowledge-presentation.component';
-
+import { WorkflowComponentsComponent } from './components/workflow-components/workflow-components.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +31,7 @@ import { KnowledgePresentationComponent } from './components/selectWorkflow/know
     ProgressBarComponent,
     InvalidFileTypeComponent,
     SelectFilesComponent,
-    DataCleaningComponent,
-    DataSelectionComponent,
-    DataTransformationComponent,
-    DataMiningComponent,
-    KnowledgePresentationComponent
+    WorkflowComponentsComponent
   ],
   imports: [
     BrowserModule,

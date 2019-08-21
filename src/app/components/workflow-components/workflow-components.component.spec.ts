@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataCleaningComponent } from './data-cleaning.component';
+import { WorkflowComponentsComponent } from './workflow-components.component';
 
-describe('DataCleaningComponent', () => {
-  let component: DataCleaningComponent;
-  let fixture: ComponentFixture<DataCleaningComponent>;
+describe('WorkflowComponentsComponent', () => {
+  let component: WorkflowComponentsComponent;
+  let fixture: ComponentFixture<WorkflowComponentsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DataCleaningComponent ]
+      declarations: [ WorkflowComponentsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DataCleaningComponent);
+    fixture = TestBed.createComponent(WorkflowComponentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
