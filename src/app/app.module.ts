@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,11 @@ import { ProgressBarComponent } from './common/progress-bar/progress-bar.compone
 import { InvalidFileTypeComponent } from './components/combineCsvs/invalid-file-type/invalid-file-type.component';
 import { SelectFilesComponent } from './components/combineCsvs/select-files/select-files.component';
 import { WorkflowComponentsComponent } from './components/workflow-components/workflow-components.component';
+import { DataCleaningComponent } from './components/workflow-components/data-cleaning/data-cleaning.component';
+import { DataSelectionComponent } from './components/workflow-components/data-selection/data-selection.component';
+import { DataTransformationComponent } from './components/workflow-components/data-transformation/data-transformation.component';
+import { DataMiningComponent } from './components/workflow-components/data-mining/data-mining.component';
+import { KnowledgePresentationComponent } from './components/workflow-components/knowledge-presentation/knowledge-presentation.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,12 @@ import { WorkflowComponentsComponent } from './components/workflow-components/wo
     ProgressBarComponent,
     InvalidFileTypeComponent,
     SelectFilesComponent,
-    WorkflowComponentsComponent
+    WorkflowComponentsComponent,
+    DataCleaningComponent,
+    DataSelectionComponent,
+    DataTransformationComponent,
+    DataMiningComponent,
+    KnowledgePresentationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +51,7 @@ import { WorkflowComponentsComponent } from './components/workflow-components/wo
     NgxFileDropModule,
     FormsModule,
     HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

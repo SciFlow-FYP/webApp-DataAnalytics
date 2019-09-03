@@ -1,10 +1,21 @@
-.nav-pills{
-    background-color:#F5F5F5;
-    color:black;
-    font-family: 'Fira Sans', sans-serif;
+// .nav-pills{
+//     background-color:#F5F5F5;
+//     color:black;
+//     font-family: 'Fira Sans', sans-serif;
+//     }
+
+// #pills-home-tab{
+//     font-family: 'Fira Sans', sans-serif;
+//     color: black;
+// }
+
+:host { color: gray; }
+
+    :host ::ng-deep .tabset1 a.nav-link {
+      color: green;
     }
 
-#pills-home-tab{
-    font-family: 'Fira Sans', sans-serif;
-    color: black;
-}
+    :host ::ng-deep .tabset1 a.nav-link.active {
+      color: red;
+      font-weight: bold;
+    }
