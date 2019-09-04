@@ -2,10 +2,10 @@
     <div class="col-md-12">
 
           <div class="form-check">
-              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." (click)="isCollapsed = !isCollapsed"
-              [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed1 = !isCollapsed1"
+              [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample1">
               Drop columns
-              <div id="collapseExample" [ngbCollapse]="isCollapsed1">
+              <div id="collapseExample1" [ngbCollapse]="isCollapsed1">
                   <div class="card">
                     <div class="card-body">
                       You can collapse this card by clicking Toggle
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." (click)="isCollapsed = !isCollapsed"
+                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed = !isCollapsed"
                 [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
                 Drop rows
                 <div id="collapseExample" [ngbCollapse]="isCollapsed">

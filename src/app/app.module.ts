@@ -23,6 +23,10 @@ import { DataSelectionComponent } from './components/workflow-components/data-se
 import { DataTransformationComponent } from './components/workflow-components/data-transformation/data-transformation.component';
 import { DataMiningComponent } from './components/workflow-components/data-mining/data-mining.component';
 import { KnowledgePresentationComponent } from './components/workflow-components/knowledge-presentation/knowledge-presentation.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { KmeanParaModalComponent } from './components/workflow-components/kmean-para-modal/kmean-para-modal.component';
+import { KnnParaModalComponent } from './components/workflow-components/knn-para-modal/knn-para-modal.component';
+import { LinearregParaModalComponent } from './components/workflow-components/linearreg-para-modal/linearreg-para-modal.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,10 @@ import { KnowledgePresentationComponent } from './components/workflow-components
     DataSelectionComponent,
     DataTransformationComponent,
     DataMiningComponent,
-    KnowledgePresentationComponent
+    KnowledgePresentationComponent,
+    KmeanParaModalComponent,
+    KnnParaModalComponent,
+    LinearregParaModalComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,8 @@ import { KnowledgePresentationComponent } from './components/workflow-components
     NgxFileDropModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DataSelectionComponent implements OnInit {
 
   constructor() { }
-  public isCollapsed1 = false;
-  public isCollapsed = false;
+  public isCollapsed1 = true;
+  public isCollapsed = true;
 
   ngOnInit() {
   }

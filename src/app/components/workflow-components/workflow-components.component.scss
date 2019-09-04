@@ -9,13 +9,14 @@
 //     color: black;
 // }
 
-:host { color: gray; }
+:host { color: black; }
 
     :host ::ng-deep .tabset1 a.nav-link {
-      color: green;
+      color: #051672;
     }
 
     :host ::ng-deep .tabset1 a.nav-link.active {
-      color: red;
+      color: #051672;
       font-weight: bold;
     }
+
