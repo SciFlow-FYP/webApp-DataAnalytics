@@ -1,12 +1,11 @@
-<button type="button" class="btn btn-info"
+<button class="btn"
       (click)="openModal(template)">
-      <fa name="plus"></fa>
-      New project
+      <fa name="ellipsis-h"></fa>
 </button>
 
   <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">Create new project</h4>
+    <h4 class="modal-title pull-left">Set Linear regressioin parameters</h4>
     <button type="button" class="close pull-right"
             aria-label="Close" (click)="modalRef.hide()">
             <span aria-hidden="true">&times;</span>
@@ -15,8 +14,9 @@
   <div class="modal-body">
       <form>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Enter project name:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <!-- <label for="recipient-name" class="col-form-label">Enter project name:</label>
+            <input type="text" class="form-control" id="recipient-name"> -->
+            Set parameters
           </div>
       </form>
   </div>
