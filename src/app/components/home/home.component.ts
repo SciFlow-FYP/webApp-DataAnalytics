@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { CombineCsvModalComponent } from './../combineCsvs/combine-csv-modal/combine-csv-modal.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NewProjectModalComponent } from './new-project-modal/new-project-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild(NewProjectModalComponent) modal: NewProjectModalComponent;
 
   constructor() { }
 

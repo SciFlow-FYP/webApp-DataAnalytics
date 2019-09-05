@@ -11,8 +11,9 @@ const routes: Routes = [
     path: 'webApp',
     component: HomeComponent,
     children: [
-      { path: 'input', component: FileuploadComponent},
-      { path: 'workflow', component: WorkflowComponentsComponent}
+      { path: '', component: FileuploadComponent},
+      { path: 'workflow', component: WorkflowComponentsComponent},
+      // { path: '**', redirectTo: '', component: PagenotfoundComponent }
     ]
   },
   { path: '**', component: PagenotfoundComponent }

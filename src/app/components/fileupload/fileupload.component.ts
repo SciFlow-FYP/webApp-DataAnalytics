@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { CombineCsvModalComponent } from './../combineCsvs/combine-csv-modal/combine-csv-modal.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fileupload',
@@ -8,8 +9,11 @@ import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 
   styleUrls: ['./fileupload.component.scss']
 })
 export class FileuploadComponent {
+  @ViewChild(CombineCsvModalComponent) modal: CombineCsvModalComponent;
 
   public files: NgxFileDropEntry[] = [];
+
+  constructor(private router: Router) {}
 
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
@@ -48,11 +52,15 @@ export class FileuploadComponent {
     }
   }
 
-  public fileOver(event){
+  public fileOver(event) {
     console.log(event);
   }
 
-  public fileLeave(event){
+  public fileLeave(event) {
     console.log(event);
+  }
+
+  public proceed() {
+    this.router.navigate([`webApp/workflow`]);
   }
 }
