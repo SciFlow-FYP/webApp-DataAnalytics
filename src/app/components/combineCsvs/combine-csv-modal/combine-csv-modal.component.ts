@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-combine-csv-modal',
@@ -10,13 +11,22 @@ import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 
 export class CombineCsvModalComponent implements OnInit {
 
   public modalRef: BsModalRef; // {1}
-  constructor(private modalService: BsModalService) {} // {2}
+  public files: NgxFileDropEntry[] = [];
+  constructor(private modalService: BsModalService, private router: Router) {} // {2}
 
   public openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template); // {3}
   }
 
-  public files: NgxFileDropEntry[] = [];
+  public closeModal() {
+    this.modalRef.hide(); // {3}
+
+  }
+
+  public saveModal() {
+    this.modalRef.hide(); // {3}
+    this.router.navigate([`webApp/workflow`]);
+  }
 
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
@@ -34,12 +44,10 @@ export class CombineCsvModalComponent implements OnInit {
           // You could upload it like this:
           const formData = new FormData()
           formData.append('logo', file, relativePath)
-
           // Headers
           const headers = new HttpHeaders({
             'security-token': 'mytoken'
           })
-
           this.http.post('https://mybackend.com/api/upload/sanitize-and-save-logo', formData, { headers: headers, responseType: 'blob' })
           .subscribe(data => {
             // Sanitized logo returned from backend
@@ -55,11 +63,11 @@ export class CombineCsvModalComponent implements OnInit {
     }
   }
 
-  public fileOver(event){
+  public fileOver(event) {
     console.log(event);
   }
 
-  public fileLeave(event){
+  public fileLeave(event) {
     console.log(event);
   }
 

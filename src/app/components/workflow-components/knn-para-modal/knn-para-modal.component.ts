@@ -15,6 +15,17 @@ export class KnnParaModalComponent implements OnInit {
     this.modalRef = this.modalService.show(template); // {3}
   }
 
+  public closeModal() {
+    this.modalRef.hide(); // {3}
+
+  }
+
+  public save() {
+    this.modalRef.hide(); // {3}
+    // this.passEntry.emit(this.name);
+    // this.router.navigate([`webApp/workflow`]);
+  }
+
   ngOnInit() {
   }
 
