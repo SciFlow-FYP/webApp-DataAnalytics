@@ -27,6 +27,11 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { KmeanParaModalComponent } from './components/workflow-components/kmean-para-modal/kmean-para-modal.component';
 import { KnnParaModalComponent } from './components/workflow-components/knn-para-modal/knn-para-modal.component';
 import { LinearregParaModalComponent } from './components/workflow-components/linearreg-para-modal/linearreg-para-modal.component';
+import { FileuploadComponent } from './components/fileupload/fileupload.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { NgxUploaderModule } from 'ngx-uploader';
+import { CombineCsvModalComponent } from './components/combineCsvs/combine-csv-modal/combine-csv-modal.component';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +54,10 @@ import { LinearregParaModalComponent } from './components/workflow-components/li
     KnowledgePresentationComponent,
     KmeanParaModalComponent,
     KnnParaModalComponent,
-    LinearregParaModalComponent
+    LinearregParaModalComponent,
+    FileuploadComponent,
+    PagenotfoundComponent,
+    CombineCsvModalComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +67,8 @@ import { LinearregParaModalComponent } from './components/workflow-components/li
     FormsModule,
     HttpClientModule,
     NgbModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    NgxUploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,6 +27,7 @@
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^5.1.1",
     "ngx-file-drop": "^8.0.7",
+    "ngx-uploader": "^7.1.0",
     "rxjs": "6.0.0",
     "zone.js": "~0.8.26"
   },
