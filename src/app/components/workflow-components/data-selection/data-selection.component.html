@@ -8,7 +8,26 @@
               <div id="collapseExample1" [ngbCollapse]="isCollapsed1">
                   <div class="card">
                     <div class="card-body">
-                      You can collapse this card by clicking Toggle
+                      	<div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			GLOBALEVENTID
+            		</div>
+			<div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			SQLDATE
+            		</div>
+			<div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			Year
+            		</div>
+			<div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			Actor2Name
+            		</div>
+			<div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			SOURCEURL
+            		</div>
                     </div>
                   </div>
                 </div>
@@ -20,7 +39,51 @@
                 <div id="collapseExample" [ngbCollapse]="isCollapsed">
                     <div class="card">
                       <div class="card-body">
-                        You can collapse this card by clicking Toggle
+                        <div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			Year 
+				<button class="btn"
+				      (click)="openModal(template)">
+				      <fa name="ellipsis-h"></fa>
+				</button>
+
+				  <ng-template #template>
+				  <div class="modal-header">
+				    <h4 class="modal-title pull-left">Select values</h4>
+				    <button type="button" class="close pull-right"
+					    aria-label="Close" (click)="modalRef.hide()">
+					    <span aria-hidden="true">&times;</span>
+				    </button>
+				  </div>
+				  <div class="modal-body">
+				      <form>
+					  <div class="form-group">
+					    <div class="form-check">
+              					<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              					2018
+            				    </div>
+					    <div class="form-check">
+              					<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              					2019
+            				    </div>
+					  </div>
+				      </form>
+				  </div>
+				  <div class="modal-footer">
+				      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal()">Cancel</button>
+				      <button type="button" class="btn btn-info" (click)="save()">Save</button>
+				  </div>
+				  </ng-template>
+
+            		</div>
+			<div class="form-check">
+              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+              			QuadClass
+				<button class="btn"
+				      (click)="openModal(template)">
+				      <fa name="ellipsis-h"></fa>
+				</button>
+            		</div>
                       </div>
                     </div>
                   </div>
