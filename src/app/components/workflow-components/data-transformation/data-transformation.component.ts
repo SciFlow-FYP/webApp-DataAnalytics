@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataTransformationComponent implements OnInit {
 
+  public currentPage = 2;
+  public changePage(index: number): void {
+      this.currentPage += index;
+  }
+
   constructor() { }
 
   ngOnInit() {

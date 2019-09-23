@@ -1,93 +1,30 @@
 <div class="row">
     <div class="col-md-12">
-
+          <!--Drop columns-->
           <div class="form-check">
               <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed1 = !isCollapsed1"
               [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample1">
               Drop columns
               <div id="collapseExample1" [ngbCollapse]="isCollapsed1">
-                  <div class="card">
-                    <div class="card-body">
-                      	<div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			GLOBALEVENTID
-            		</div>
-			<div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			SQLDATE
-            		</div>
-			<div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			Year
-            		</div>
-			<div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			Actor2Name
-            		</div>
-			<div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			SOURCEURL
-            		</div>
-                    </div>
-                  </div>
-                </div>
-            </div>
+                  <app-drop-columns-list></app-drop-columns-list>
+              </div>
+          </div>
+
+          <!--Drop rows-->
             <div class="form-check">
                 <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed = !isCollapsed"
                 [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
                 Drop rows
                 <div id="collapseExample" [ngbCollapse]="isCollapsed">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			Year 
-				<button class="btn"
-				      (click)="openModal(template)">
-				      <fa name="ellipsis-h"></fa>
-				</button>
-
-				  <ng-template #template>
-				  <div class="modal-header">
-				    <h4 class="modal-title pull-left">Select values</h4>
-				    <button type="button" class="close pull-right"
-					    aria-label="Close" (click)="modalRef.hide()">
-					    <span aria-hidden="true">&times;</span>
-				    </button>
-				  </div>
-				  <div class="modal-body">
-				      <form>
-					  <div class="form-group">
-					    <div class="form-check">
-              					<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              					2018
-            				    </div>
-					    <div class="form-check">
-              					<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              					2019
-            				    </div>
-					  </div>
-				      </form>
-				  </div>
-				  <div class="modal-footer">
-				      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal()">Cancel</button>
-				      <button type="button" class="btn btn-info" (click)="save()">Save</button>
-				  </div>
-				  </ng-template>
-
-            		</div>
-			<div class="form-check">
-              			<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-              			QuadClass
-				<button class="btn"
-				      (click)="openModal(template)">
-				      <fa name="ellipsis-h"></fa>
-				</button>
-            		</div>
-                      </div>
-                    </div>
-                  </div>
+                  <app-drop-rows-list></app-drop-rows-list>
+                </div>
               </div>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-12">
+        <!-- <button type="button" class="btn btn-info" (click)="changePage(-1)">Back</button> -->
+        <button type="button" class="btn btn-info" (click)="changePage(1)">Next</button>
+    </div>
+  </div>

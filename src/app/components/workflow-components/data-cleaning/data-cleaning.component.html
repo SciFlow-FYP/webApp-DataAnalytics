@@ -2,12 +2,24 @@
   <div class="col-md-12">
 
         <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-            Handle missing value
+            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" name="HandleMissingValues" value="option1" aria-label="...">
+            Handle missing values
           </div>
           <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankRadio1" value="option1" aria-label="...">
+            <input class="form-check-input position-static" type="checkbox" id="blankRadio1" name="DropDuplicateRows" value="option2" aria-label="...">
             Drop duplicate rows
         </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+
+          <button type="button" class="btn btn-info" (click)="changePage(-1)">Back</button>
+
+          <button type="button" class="btn btn-info" (click)="changePage(1)">Next</button>
+
+
   </div>
 </div>

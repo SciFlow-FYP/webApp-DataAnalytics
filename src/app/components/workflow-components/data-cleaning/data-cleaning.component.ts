@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataCleaningComponent implements OnInit {
 
+  HandleMissingValues: boolean;
+  DropDuplicateRows: boolean;
+
   constructor() { }
 
   ngOnInit() {

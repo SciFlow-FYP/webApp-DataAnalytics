@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workflow-components.component.scss']
 })
 export class WorkflowComponentsComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
