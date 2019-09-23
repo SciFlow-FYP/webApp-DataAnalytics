@@ -1,30 +1,34 @@
 <div class="row">
     <div class="col-md-12">
-          <!--Drop columns-->
+          <!--select columns-->
           <div class="form-check">
               <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed1 = !isCollapsed1"
               [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample1">
-              Drop columns
+              Select columns for analysis
               <div id="collapseExample1" [ngbCollapse]="isCollapsed1">
-                  <app-drop-columns-list></app-drop-columns-list>
+                  <!--select columns values component-->
+                  <app-select-columns></app-select-columns>
               </div>
           </div>
 
-          <!--Drop rows-->
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed = !isCollapsed"
-                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-                Drop rows
-                <div id="collapseExample" [ngbCollapse]="isCollapsed">
-                  <app-drop-rows-list></app-drop-rows-list>
-                </div>
+          <!--select rows-->
+          <div class="form-check">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed1 = !isCollapsed1"
+              [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample1">
+              Select rows for analysis
+              <div id="collapseExample1" [ngbCollapse]="isCollapsed">
+                  <!--select rows values component-->
+                  <app-select-rows></app-select-rows>
               </div>
+          </div>
+
+
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
         <!-- <button type="button" class="btn btn-info" (click)="changePage(-1)">Back</button> -->
-        <button type="button" class="btn btn-info" (click)="changePage(1)">Next</button>
+        <button type="button" class="btn btn-info">Next</button>
     </div>
   </div>
