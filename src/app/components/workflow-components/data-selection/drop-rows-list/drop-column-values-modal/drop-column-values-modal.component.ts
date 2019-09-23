@@ -2,11 +2,11 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-data-selection',
-  templateUrl: './data-selection.component.html',
-  styleUrls: ['./data-selection.component.scss']
+  selector: 'app-drop-column-values-modal',
+  templateUrl: './drop-column-values-modal.component.html',
+  styleUrls: ['./drop-column-values-modal.component.scss']
 })
-export class DataSelectionComponent implements OnInit {
+export class DropColumnValuesModalComponent implements OnInit {
 
   public modalRef: BsModalRef; // {1}
   constructor(private modalService: BsModalService) { }
@@ -27,6 +27,8 @@ export class DataSelectionComponent implements OnInit {
     // this.passEntry.emit(this.name);
     // this.router.navigate([`webApp/workflow`]);
   }
+
+
 
   ngOnInit() {
   }

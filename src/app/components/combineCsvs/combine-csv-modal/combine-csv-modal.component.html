@@ -33,7 +33,8 @@
                   </thead>
                   <tbody class="upload-name-style">
                       <tr *ngFor="let item of files; let i=index">
-                          <td>{{ item.relativePath }}</td>
+                          <td>{{ item.fileEntry.name }}</td>
+                          <!-- <td>{{  }}</td> -->
                           <!-- <td>{{ item.fileEntry.isFile }}</td> -->
                       </tr>
 

@@ -13,6 +13,10 @@ export class DataMiningComponent implements OnInit {
   @ViewChild(KnnParaModalComponent) modalknn: KnnParaModalComponent;
   @ViewChild(LinearregParaModalComponent) modallinearreg: LinearregParaModalComponent;
 
+  public currentPage = 3;
+  public changePage(index: number): void {
+      this.currentPage += index;
+  }
   constructor() { }
 
   ngOnInit() {

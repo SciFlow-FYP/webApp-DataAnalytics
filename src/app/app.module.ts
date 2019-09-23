@@ -31,6 +31,12 @@ import { FileuploadComponent } from './components/fileupload/fileupload.componen
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { NgxUploaderModule } from 'ngx-uploader';
 import { CombineCsvModalComponent } from './components/combineCsvs/combine-csv-modal/combine-csv-modal.component';
+import { DropColumnsListComponent } from './components/workflow-components/data-cleaning/drop-columns-list/drop-columns-list.component';
+import { DropRowsListComponent } from './components/workflow-components/data-cleaning/drop-rows-list/drop-rows-list.component';
+import { DropColumnValuesModalComponent } from './components/workflow-components/data-selection/drop-rows-list/drop-column-values-modal/drop-column-values-modal.component';
+import { SelectColumnsComponent } from './components/workflow-components/data-selection/select-columns/select-columns.component';
+import { SelectRowsComponent } from './components/workflow-components/data-selection/select-rows/select-rows.component';
+import { SelectRowValuesComponent } from './components/workflow-components/data-selection/select-rows/select-row-values/select-row-values.component';
 
 
 @NgModule({
@@ -57,7 +63,13 @@ import { CombineCsvModalComponent } from './components/combineCsvs/combine-csv-m
     LinearregParaModalComponent,
     FileuploadComponent,
     PagenotfoundComponent,
-    CombineCsvModalComponent
+    CombineCsvModalComponent,
+    DropColumnsListComponent,
+    DropRowsListComponent,
+    DropColumnValuesModalComponent,
+    SelectColumnsComponent,
+    SelectRowsComponent,
+    SelectRowValuesComponent
   ],
   imports: [
     BrowserModule,

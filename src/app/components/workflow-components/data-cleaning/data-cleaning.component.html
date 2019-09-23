@@ -1,13 +1,68 @@
 <div class="row">
   <div class="col-md-12">
-
+        <!--Custom missing values-->
         <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-            Handle missing value
-          </div>
+            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed1 = !isCollapsed1"
+            [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample1">
+            Set custom missing values
+            <div id="collapseExample1" [ngbCollapse]="isCollapsed2">
+                <!--set custom missing values modal and collapse for n/a and others like drop columns-->
+            </div>
+        </div>
+
+        <!--Drop columns-->
+        <div class="form-check">
+            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed1 = !isCollapsed1"
+            [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample1">
+            Drop columns
+            <div id="collapseExample1" [ngbCollapse]="isCollapsed1">
+                <app-drop-columns-list></app-drop-columns-list>
+            </div>
+        </div>
+
+        <!--Drop rows-->
           <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankRadio1" value="option1" aria-label="...">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" (change)="isCollapsed = !isCollapsed"
+              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+              Drop rows
+              <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                <app-drop-rows-list></app-drop-rows-list>
+              </div>
+            </div>
+        <div class="form-check">
+            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" name="HandleMissingValues" value="option1" aria-label="...">
+            Maximum percentage of missing values allowed
+            <div id="collapseExample" [ngbCollapse]="isCollapsed3">
+                <!--columns and rows percentage component-->
+            </div>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input position-static" type="checkbox" id="blankRadio1" name="DropDuplicateRows" value="option2" aria-label="...">
             Drop duplicate rows
         </div>
+        <br>
+        <div>
+            <!-- <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" name="HandleMissingValues" value="option1" aria-label="..."> -->
+            Handle missing values
+            <div class="form-check">
+                <input class="form-check-input position-static" type="checkbox" id="blankRadio1" name="DropDuplicateRows" value="option2" aria-label="...">
+                interpolate
+            </div>
+            <div class="form-check">
+                <input class="form-check-input position-static" type="checkbox" id="blankRadio1" name="DropDuplicateRows" value="option2" aria-label="...">
+                mode
+            </div>
+            <div class="form-check">
+                <input class="form-check-input position-static" type="checkbox" id="blankRadio1" name="DropDuplicateRows" value="option2" aria-label="...">
+                constant
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+          <button type="button" class="btn btn-info">Back</button>
+          <button type="button" class="btn btn-info">Next</button>
   </div>
 </div>

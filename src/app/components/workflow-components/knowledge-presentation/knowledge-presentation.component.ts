@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KnowledgePresentationComponent implements OnInit {
 
+
+  public currentPage = 4;
+  public changePage(index: number): void {
+      this.currentPage += index;
+  }
+
   constructor() { }
 
   ngOnInit() {
