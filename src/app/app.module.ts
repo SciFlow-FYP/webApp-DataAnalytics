@@ -38,7 +38,6 @@ import { SelectColumnsComponent } from './components/workflow-components/data-se
 import { SelectRowsComponent } from './components/workflow-components/data-selection/select-rows/select-rows.component';
 import { SelectRowValuesComponent } from './components/workflow-components/data-selection/select-rows/select-row-values/select-row-values.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
